@@ -1,0 +1,328 @@
+* {
+  font-family: "Montserrat", arial;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  background-position: center;
+  background-size: contain;
+}
+
+/* tete de page */
+
+header.header {
+  display: flex;
+  align-items: center;
+}
+
+/*LE LOGO DE CODEX*/
+.span {
+  font-size: 100px;
+  text-align: center;
+  position: relative;
+}
+.span::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  bottom: 0px;
+  height: 10px;
+  background-color: #3a768f;
+}
+section.top-page {
+  background: url("image/dev1.jpg");
+  background-size: cover;
+  height: 90vh;
+  padding: 15px;
+  margin: 0px;
+}
+/* menu de navigation */
+
+.nav {
+  display: none;
+}
+.menu-icon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding: 10px;
+  background-color: #191818;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  /* background-color: #191818; */
+  color: white;
+  padding: 50px 20px;
+  z-index: 998;
+  transition: right 0.3s ease-in-out;
+}
+.menu a {
+  display: block;
+  padding: 20px;
+  font-size: 20px;
+  color: #3a768f;
+  font-weight: bold;
+  text-decoration: none;
+}
+.menu a:hover {
+  background-color: #dde0de;
+  color: black;
+}
+input[type="checkbox"]:checked ~ .menu {
+  right: 0;
+}
+
+/* page de bienvenue  */
+
+.slogan {
+  position: relative;
+  padding: 20px 50px;
+}
+
+.big-title {
+  color: white;
+  font-size: 60px;
+  font-family: "Abril FatFace", cursive;
+  font-weight: 100;
+  width: 60%;
+  text-shadow: 0px 0px 8px #3a768f;
+}
+
+.scroll-down {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  text-shadow: 0px 0px 5px #3a768f;
+}
+
+/* services */
+
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.livraison {
+  font-size: 50px;
+  color: #3a768f;
+}
+
+.service-details {
+  font-weight: 600;
+  width: 200px;
+  text-align: center;
+}
+
+/* best sells */
+
+.section-title {
+  font-size: 50px;
+  font-family: "Abril FatFace", cursive;
+  font-weight: 100;
+  position: relative;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  background-color: #3a768f;
+  width: 50px;
+  height: 7px;
+  bottom: 0;
+}
+
+.nos_services {
+  margin-left: 100px;
+  margin-right: 100px;
+  overflow: hidden;
+}
+
+.partie_service {
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.lien_service {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.no-grid {
+  min-width: 350px;
+  height: 500px;
+  flex: 1;
+}
+
+.partie1 {
+  background-image: url(image/cyber2.jpg);
+}
+.partie1:hover {
+  transform: scale(1.12);
+}
+
+.partie2 {
+  background-image: url(image/mobile3.jpg);
+}
+.partie2:hover {
+  transform: scale(1.12);
+}
+.partie3 {
+  background-image: url(image/mainpro2.png);
+}
+.partie3:hover {
+  transform: scale(1.12);
+}
+
+.partie4 {
+  background-image: url(image/web.jpg);
+}
+.partie4:hover {
+  transform: scale(1.12);
+}
+.partie5 {
+  background-image: url(image/camerpro.jpg);
+}
+.partie5:hover {
+  transform: scale(1.12);
+}
+.partie6:hover {
+  transform: scale(1.12);
+}
+.partie6 {
+  background-image: url(image/basepro.png);
+}
+
+.service_detail {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #ffffffdf;
+  padding: 5px 20px;
+}
+
+.nom_service {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 3px;
+}
+
+.prix_service {
+  color: #3a768f;
+  line-height: 3px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* nos plantes */
+
+.nos_produits {
+  margin: 100px;
+}
+
+.partie_par_grid {
+  display: grid;
+  /*min-height: 150vh;*/
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 400px);
+  margin: 20px;
+}
+
+.partie_par_grid1 {
+  background-image: url(image/tele2.jpg);
+
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.partie_par_grid2 {
+  background-image: url(image/sm.png);
+  grid-column: 3/5;
+}
+
+.partie_par_grid3 {
+  background-image: url(image/ordi2.jpg);
+  grid-column: 3/5;
+}
+
+.partie_par_grid4 {
+  background-image: url(image/drone.jpg);
+  grid-column: 1;
+  grid-row: 3/5;
+}
+
+.partie_par_grid5 {
+  background-image: url(image/conso.jpg);
+  grid-column: 2/4;
+  grid-row: 3/5;
+}
+
+.partie_par_grid6 {
+  background-image: url(image/div.jpg);
+  grid-column: 4;
+  grid-row: 3/5;
+}
+
+/* pied de page */
+
+footer {
+  background-color: #191818;
+  width: 100%;
+  height: 300px;
+  color: white;
+}
+div.copy {
+  font-size: 20px;
+
+  margin: 20px;
+  position: relative;
+  left: 30%;
+  display: flex;
+}
+i {
+  font-size: 30px;
+  color: skyblue;
+}
+.i {
+  color: red;
+}
+.f {
+  color: blue;
+}
+.t {
+  color: skyblue;
+}
+.l {
+  color: darkblue;
+}
+.reseau {
+  position: relative;
+  left: 50%;
+}
